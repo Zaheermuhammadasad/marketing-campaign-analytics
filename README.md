@@ -32,7 +32,7 @@ A business wants to understand campaign response, customer purchasing behaviour,
 | Missing income values | 24 |
 | Latest campaign responders | 334 |
 | Latest campaign response rate | 14.91% |
-| Customers accepting one or more historical campaigns | 609 |
+| Customers accepting one or more historical campaigns | 568 |
 | Total recorded product spend across six product groups | 1,356,988 |
 | Average product spend per customer | 605.80 |
 | Median product spend per customer | 396 |
