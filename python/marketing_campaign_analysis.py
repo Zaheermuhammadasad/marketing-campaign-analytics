@@ -96,7 +96,8 @@ def main():
     campaign_table.to_csv(out_dir / "campaign_response_summary.csv", index=False)
 
     product = df[SPEND].fillna(0).sum().sort_values(ascending=False)
-    product_table = pd.DataFrame({"product_category": product.index.str.replace("Mnt", "", regex=False),
+    product_labels = {"MntWines": "Wine", "MntFruits": "Fruit", "MntMeatProducts": "Meat", "MntFishProducts": "Fish", "MntSweetProducts": "Sweets", "MntGoldProds": "Gold"}
+    product_table = pd.DataFrame({"product_category": [product_labels[c] for c in product.index],
                                   "total_spend": product.values})
     product_table["share_pct"] = product_table["total_spend"] / product_table["total_spend"].sum() * 100
     product_table.to_csv(out_dir / "product_spend_summary.csv", index=False)
