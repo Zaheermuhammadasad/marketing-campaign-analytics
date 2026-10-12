@@ -10,8 +10,7 @@ SELECT COUNT(*) AS customers, SUM(Response=1) AS latest_campaign_responders,
 FROM marketing_campaign;
 
 SELECT Response, COUNT(*) AS customers, AVG(Income) AS average_income,
-       AVG(Recency) AS average_recency_days,
-       AVG(NumWebVisitsMonth) AS average_monthly_web_visits,
-       AVG(NumWebPurchases) AS average_web_purchases,
-       AVG(MntWines+MntFruits+MntMeatProducts+MntFishProducts+MntSweetProducts+MntGoldProds) AS average_spend
+       AVG(Recency) AS average_recency_days, AVG(NumWebVisitsMonth) AS avg_web_visits,
+       AVG(NumWebPurchases) AS avg_web_purchases,
+       AVG(MntWines+MntFruits+MntMeatProducts+MntFishProducts+MntSweetProducts+MntGoldProds) AS avg_spend
 FROM marketing_campaign GROUP BY Response;

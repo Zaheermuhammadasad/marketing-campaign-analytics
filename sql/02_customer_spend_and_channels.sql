@@ -11,11 +11,8 @@ FROM (
  UNION ALL SELECT 'Fish', MntFishProducts FROM marketing_campaign
  UNION ALL SELECT 'Sweets', MntSweetProducts FROM marketing_campaign
  UNION ALL SELECT 'Gold', MntGoldProds FROM marketing_campaign
-) p
-GROUP BY product_category ORDER BY total_spend DESC;
+) p GROUP BY product_category ORDER BY total_spend DESC;
 
-SELECT SUM(NumWebPurchases) AS web_purchases,
-       SUM(NumCatalogPurchases) AS catalog_purchases,
-       SUM(NumStorePurchases) AS store_purchases,
-       SUM(NumDealsPurchases) AS deal_purchases
+SELECT SUM(NumWebPurchases) AS web_purchases, SUM(NumCatalogPurchases) AS catalog_purchases,
+       SUM(NumStorePurchases) AS store_purchases, SUM(NumDealsPurchases) AS deal_purchases
 FROM marketing_campaign;
