@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+data/marketing_campaign.csv
+outputs/customer_level_derived.csv
