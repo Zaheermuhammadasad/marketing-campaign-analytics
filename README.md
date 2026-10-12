@@ -8,6 +8,8 @@ An end-to-end marketing analytics portfolio project using a public customer pers
 
 ![Dashboard preview](dashboard/dashboard_preview.svg)
 
+**[View dashboard source](dashboard/marketing_campaign_dashboard.html)** · **[View analysis code](python/marketing_campaign_analysis.py)**
+
 ## Business problem
 
 A business wants to understand campaign response, customer purchasing behaviour, product affinity, and channel preference. This project turns customer-level records into actionable questions for the marketing team.
