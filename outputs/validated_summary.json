@@ -23,10 +23,32 @@
     "sweets": 60621,
     "fruits": 58917
   },
+  "historical_campaign_acceptance": {
+    "AcceptedCmp1": {
+      "count": 144,
+      "rate_pct": 6.4286
+    },
+    "AcceptedCmp2": {
+      "count": 30,
+      "rate_pct": 1.3393
+    },
+    "AcceptedCmp3": {
+      "count": 163,
+      "rate_pct": 7.2768
+    },
+    "AcceptedCmp4": {
+      "count": 167,
+      "rate_pct": 7.4554
+    },
+    "AcceptedCmp5": {
+      "count": 163,
+      "rate_pct": 7.2768
+    }
+  },
   "limitations": [
-    "No media spend",
+    "No ad spend",
     "No impressions or clicks",
     "No randomized holdout",
-    "ROAS and causal incremental lift unavailable"
+    "ROAS and causal lift unavailable"
   ]
 }
