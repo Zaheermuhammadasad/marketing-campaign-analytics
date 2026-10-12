@@ -4,7 +4,7 @@ An end-to-end marketing analytics portfolio project using a public customer pers
 
 **Tools:** MySQL 8 · SQL · Python · Pandas · Plotly · GitHub
 
-**[Open the interactive dashboard](https://htmlpreview.github.io/?https://github.com/Zaheermuhammadasad/marketing-campaign-analytics/blob/main/dashboard/marketing_campaign_dashboard.html)** · **[Business insights](analysis/business_insights.md)** · **[Setup instructions](documentation/getting_started.md)** · **[CV/LinkedIn entry](documentation/cv_linkedin_project_entry.md)**
+**[Open the interactive dashboard](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Zaheermuhammadasad/marketing-campaign-analytics/main/dashboard/marketing_campaign_dashboard.html)** · **[Business insights](analysis/business_insights.md)** · **[Setup instructions](documentation/getting_started.md)** · **[CV/LinkedIn entry](documentation/cv_linkedin_project_entry.md)**
 
 ![Dashboard preview](dashboard/dashboard_preview.svg)
 
@@ -56,7 +56,7 @@ These are descriptive findings. They do not prove why a customer responded or wh
 
 The dashboard includes KPI cards and charts for campaign acceptance/response, product-group spending, purchase channels, and response split. It is browser-based HTML using Plotly, not a native Power BI PBIX or Tableau TWB file.
 
-**[Launch the interactive dashboard](https://htmlpreview.github.io/?https://github.com/Zaheermuhammadasad/marketing-campaign-analytics/blob/main/dashboard/marketing_campaign_dashboard.html)**
+**[Launch the interactive dashboard](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Zaheermuhammadasad/marketing-campaign-analytics/main/dashboard/marketing_campaign_dashboard.html)**
 
 The HTML loads Plotly from a CDN, so an internet connection is required when viewing the charts.
 
