@@ -1,23 +1,47 @@
 # Business Insights — Marketing Campaign Analytics
 
-## Data quality
-The public source has 2,240 customer records and 29 fields. Initial inspection found no duplicate customer IDs and 24 missing income values. Three birth years are at or before 1900 and one income value is 666,666; flag these for review rather than deleting automatically.
+The following metrics were calculated from the public customer/campaign dataset. They are descriptive and should not be interpreted as causal campaign effects.
 
-## Product spending
-Recorded spend across six product groups totals 1,356,988 source monetary units. Average is 605.80 per customer and median is 396. Wine is largest (680,816), followed by meat products (373,968). These can inform product-affinity hypotheses, but spend is not profit.
+## 1. Latest campaign response was 14.91%
 
-## Campaign response
-The latest campaign's `Response` field is positive for 334 customers (14.91%). Historical acceptance rates: Campaign 1 6.43%, Campaign 2 1.34%, Campaign 3 7.28%, Campaign 4 7.46%, Campaign 5 7.28%. These are descriptive rates, not controlled comparisons.
+**Evidence:** 334 of 2,240 customers have `Response = 1`.
 
-## Purchase channels
-Recorded counts are 12,970 store purchases, 9,150 web purchases, and 5,963 catalog purchases. These customer-level counts are not conversion rates.
+**Implication:** This is the observed response rate in the available sample. It does not establish incremental lift because there is no randomized holdout group.
 
-## Recommendations
-1. Profile customers using recency, spend, channel preference, and product mix with clear definitions.
-2. Test associations between historical acceptance and latest response.
-3. Test wine/meat product-affinity messaging before scaling.
-4. Review missing/extreme income and implausible birth years; retain quality flags.
-5. Capture ad spend, reach, clicks, conversions and margin, using a randomized holdout for incremental lift.
+**Recommendation:** Record campaign eligibility, reach, cost, clicks, conversions and a randomized holdout in the next campaign so future measurement can estimate lift.
+
+## 2. Wine and meat were the largest product-spend groups
+
+**Evidence:** Recorded spend totals were 680,816 for wine and 373,968 for meat products. All six `Mnt*` fields sum to 1,356,988.
+
+**Implication:** Product groups can inform affinity hypotheses for content or cross-sell tests. These totals are historical spending, not profit or contribution margin.
+
+**Recommendation:** Test product-specific messaging by customer segment and evaluate incremental margin, not spend alone.
+
+## 3. Store purchase counts were highest among recorded channels
+
+**Evidence:** Store purchases totalled 12,970, compared with 9,150 web and 5,963 catalog purchases.
+
+**Implication:** These are customer-level purchase counts, not ad-channel attribution or conversion rates.
+
+**Recommendation:** Connect campaign identifiers to purchase events and capture channel touchpoints before making budget-allocation claims.
+
+## 4. Data quality needs explicit treatment
+
+**Evidence:** Initial checks found 24 missing income values, three birth years at or before 1900, and an income value of 666,666.
+
+**Recommendation:** Keep quality flags, investigate source records where possible, and run sensitivity checks with and without flagged rows. Do not silently delete unusual observations.
+
+## 5. Historical campaign acceptance varied
+
+**Evidence:** The five historical campaign flags range from 1.34% acceptance for `AcceptedCmp2` to 7.46% for `AcceptedCmp4`.
+
+**Caution:** Campaigns may differ in timing, audience and context. These percentages are not a randomized head-to-head test.
+
+## Recommended next experiment
+
+Define a target segment before campaign launch, randomly assign eligible customers to treatment and holdout, record spend/reach/click/conversion and product margin, then compare conversion and incremental contribution with uncertainty intervals.
 
 ## Limitations
-The data lacks ad spend, impressions/clicks, contribution margin, and randomized holdout. Do not claim ROAS, CAC, incremental lift or causality.
+
+The dataset does not provide usable advertising spend, impressions, clicks, randomized control assignment or contribution margin. ROAS, CAC, incremental lift and causal campaign effectiveness cannot be estimated from these data alone.
